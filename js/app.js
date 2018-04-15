@@ -4,6 +4,9 @@ $(() => {
   $('body').css('overflow','hidden');
   $('body').attr('scroll','no');
 
+  // refresh page returns to top
+  $('html, body').animate({ scrollTop: 0 });
+
   // vars for page jump buttons
   const $instructionBtn = $('.instruct');
   const $playBtn = $('.play');
