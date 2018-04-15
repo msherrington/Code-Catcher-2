@@ -9,21 +9,24 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron|VT323" rel="stylesheet">
   </head>
   <body>
-    <div class="container1">
-
-      <h1>Code&nbsp;Catcher</h1>
+    <div class="home-screen">
+      <h1>Code Catcher</h1>
 
       <img src="assets/images/coder.gif" id="mainImage">
-      <br>
-      <button class="instruct">&lt;&ensp;Instructions&ensp;&gt;</button>
-      <button class="play">&lt;&ensp;Play Game&ensp;&gt;</button>
 
-      <div class="instructions">
+      <div class="buttons">
+        <button class="instruct">&lt;&nbsp;Instructions&nbsp;&gt;</button>
+        <button class="play">&lt;&nbsp;Play Game&nbsp;&gt;</button>
+      </div>
+    </div>
+
+    <div class="instruction-screen">
+      <div class="instructions-box">
         <h2>HOW TO PLAY</h2>
         <img src="assets/images/coder.gif" class="codeImg">
         <p>The coder needs code to build an awesome website and attract visitors.</p>
         <p>Help him catch falling pieces of code.</p>
-        <p>Use the arrow keys&ensp;<img src="assets/images/arrows.png" id="arrows">&ensp;to move him left and right.</p>
+        <p>Use the arrow keys&nbsp;<img src="assets/images/arrows.png" id="arrows">&nbsp;to move him left and right.</p>
         <p>Catch as many pieces of code as you can in 60 seconds.</p>
         <p>Every piece of code you catch scores web hits.</p>
         <p>
@@ -34,11 +37,11 @@
         <p>Just watch out for code bugs <img src="assets/images/bug.png" class="codeImg"> or lose 500 web hits.</p>
       </div>
 
-      <button class="play" id="play2">&lt;&ensp;Play Game&ensp;&gt;</button>
-
+      <button class="play" id="play2">&lt;&nbsp;Play Game&nbsp;&gt;</button>
     </div>
 
-    <div class="container2" id="game">
+
+    <div class="game-screen" id="game">
 
       <audio id="buzz" src="assets/sounds/buzz.mp3"></audio>
       <audio id="pop" src="assets/sounds/pop.mp3"></audio>

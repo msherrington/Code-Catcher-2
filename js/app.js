@@ -12,8 +12,9 @@ $(() => {
   const $playBtn = $('.play');
   const $playBtn2 = $('#play2');
 
-  // var for instructions page
-  const $instructionPage = $('.instructions');
+  // vars for pages
+  const $instructionPage = $('.instruction-screen');
+  const $gamePage = $('.game-screen');
 
   // var for button to start game play
   const $startBtn = $('#startBtn');
@@ -216,7 +217,7 @@ $(() => {
 
   // function for play button
   function jumpToGame() {
-    $('html, body').animate({ scrollTop: $(document).height() }, 2000);
+    $('html, body').animate({ scrollTop: $($gamePage).offset().top + 20 }, 1500);
   }
 
   // event listener for instructions button
@@ -224,8 +225,11 @@ $(() => {
 
   // function for instructions button
   function showInstructions() {
-    $('html, body').animate({ scrollTop: $(document).height() - 1830 }, 2000);
+    // $('html, body').animate({ scrollTop: $(document).height() - 1830 }, 2000);
+    // $('html, body').animate({ scrollTop: $('.home-screen').height() }, 1500);
+    // $('html, body').animate({ scrollTop: $(window).innerHeight() }, 1500);
     $instructionPage.show();
+    $('html, body').animate({ scrollTop: $($instructionPage).offset().top - 10 }, 1500);
     $playBtn2.show();
   }
 
