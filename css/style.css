@@ -28,16 +28,18 @@ h1 {
 }
 
 .home-screen {
+  min-height: 100%;
   height: 100%;
 }
 
 .instruction-screen {
+  min-height: 100%;
   height: 100%;
 }
 
 .buttons {
   margin-top: 6%;
-  margin-bottom: 15%;
+  /*margin-bottom: 15%;*/
 }
 
 button {
@@ -49,8 +51,16 @@ button {
   width: 280px;
   height: 70px;
   /*margin: 70px 50px 200px;*/
-  margin: 0px 50px 0px;
+  /*margin: 0px 50px 0px;*/
+  margin: 0 auto;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 15px;
+}
+
+button#play2 {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 a {
@@ -83,9 +93,14 @@ p {
   font-family: Arial, sans-serif;
 }
 
-p .codeImg {
-  height: 65px;
-  width: 65px;
+.coder-image {
+  /*height: 65px;*/
+  width: 10%;
+}
+
+.code-images {
+  height: 5%;
+  width: 5%;
 }
 
 #arrows {
@@ -99,7 +114,8 @@ p .codeImg {
   background-image: url('../assets/images/codewall.jpg');
   background-position: center;
   background-size: cover;
-  height: 750px;
+  /*height: 750px;*/
+  height: 100%;
   width: 100%;
   margin-left: -8px;;
   padding-top: 150px;

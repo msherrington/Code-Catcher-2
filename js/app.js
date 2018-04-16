@@ -1,5 +1,22 @@
 $(() => {
 
+  // vars for pages
+  const $homePage = $('.home-screen');
+  const $instructionPage = $('.instruction-screen');
+  const $gamePage = $('.game-screen');
+
+  // fit pages to window size on page load and resize
+  function resizePages() {
+    $homePage.height($(window).innerHeight());
+    // $instructionPage.height($(window).innerHeight());
+    $gamePage.height($(window).innerHeight());
+  }
+  resizePages();
+
+  $(window).resize(function () {
+    resizePages();
+  });
+
   // two lines for scroll lock
   $('body').css('overflow','hidden');
   $('body').attr('scroll','no');
@@ -12,9 +29,6 @@ $(() => {
   const $playBtn = $('.play');
   const $playBtn2 = $('#play2');
 
-  // vars for pages
-  const $instructionPage = $('.instruction-screen');
-  const $gamePage = $('.game-screen');
 
   // var for button to start game play
   const $startBtn = $('#startBtn');
