@@ -73,20 +73,24 @@ $(() => {
   // hide scoreBoard before game starts
   $scoreBoard.hide();
 
-  // event listener for arrrow keys to move coder
+  // event listener for arrow keys to move coder
   let pressed = false;
   $(document).on('keydown', (e) => {
     if(!pressed){ //start the coder moving (once only)
-      const width = $codewall.width();
+
+      // stop coder guy moving off game play area
+      const leftSpace = $coder.position().left - (-35);
+      const rightSpace = 835 - $coder.position().left;
+
       switch (e.which) {
         case 37:  //left arrow key
           $coder.stop().animate({
-            left: '-=' + width //allow coder to move along whole codewall
+            left: '-=' + leftSpace //allow coder to move along whole codewall
           }, 1500);
           break;
         case 39:  //right arrow key
           $coder.stop().animate({
-            left: '+=' + width //allow coder to move along whole codewall
+            left: '+=' + rightSpace //allow coder to move along whole codewall
           }, 1500);
           break;
       }
@@ -97,11 +101,11 @@ $(() => {
     pressed = false;
     if ($coder.position().left < -35) {
       $coder.animate({
-        left: -35
+        left: -35 // bring coder back into game play area if outside boundaries
       });
     } else if ($coder.position().left > 835) {
       $coder.animate({
-        left: 835
+        left: 835  // bring coder back into game play area if outside boundaries
       });
     }
   });
