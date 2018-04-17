@@ -8,7 +8,7 @@ $(() => {
   // fit pages to window size on page load and resize
   function resizePages() {
     $homePage.height($(window).innerHeight());
-    // $instructionPage.height($(window).innerHeight());
+    // $instructionPage.height($(window).innerHeight()); -- NEEDS REINSTATING!!!!!
     $gamePage.height($(window).innerHeight());
   }
   resizePages();
@@ -182,7 +182,7 @@ $(() => {
       easing: 'linear',
       complete: resetDiv,
       progress: function() {
-        if (($(this).position().top >= 460) && ($coder.position().left < ($(this).position().left + 20)) && ($coder.position().left > ($(this).position().left) - 20)) {
+        if (($(this).position().top >= 460) && ($coder.position().left < ($(this).position().left + 40)) && ($coder.position().left > ($(this).position().left) - 40)) {
           $coder.stop(); // stops coder after a catch, to stop him flying off the screen
           pressed = false;
           // if coder catches bug, -5 points, shake coder
@@ -239,9 +239,6 @@ $(() => {
 
   // function for instructions button
   function showInstructions() {
-    // $('html, body').animate({ scrollTop: $(document).height() - 1830 }, 2000);
-    // $('html, body').animate({ scrollTop: $('.home-screen').height() }, 1500);
-    // $('html, body').animate({ scrollTop: $(window).innerHeight() }, 1500);
     $instructionPage.show();
     $('html, body').animate({ scrollTop: $($instructionPage).offset().top - 10 }, 1500);
     $playBtn2.show();
